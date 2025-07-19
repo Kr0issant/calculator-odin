@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main-container {
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 5px 10px red;
+}
+
+.calculator {
+    width: 25vw;
+    background-color: #22272e;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px #121212, 0 8px 10px -6px #121212;
+}
+
+.display {
+    background-color: #3c5747;
+    border-radius: 0.5rem;
+    height: 7rem;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.display-op {
+    text-align: right;
+    font-size: 1.25rem;
+    height: 33.33%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.display-result {
+    text-align: right;
+    font-size: 2.25rem;
+    font-weight: 700;
+    height: 66.67%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    background-color: #4B5563;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    user-select: none;
+    padding: 1rem 0;
+    aspect-ratio: 1/1;
+    flex: 1 1 calc(25% - (1rem * 0.75));
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+.button:active {
+    transform: scale(0.95);
+}
+.button.num:hover {
+    background-color: #5a677b;
+}
+.button.op {
+    background-color: #374151;
+    color: #4ADE80;
+}
+.button.op:hover {
+    background-color: #4b5563;
+}
+.button.action {
+    background-color: #374151;
+    color: #F87171;
+}
+.button.action:hover {
+    background-color: #4b5563;
+}
+.button#evaluate {
+    background-color: #346adf;
+    color: white;
+    aspect-ratio: auto;
+    flex: 1 1 calc(50% - (1rem * 0.5));
+}
+.button#evaluate:hover {
+    background-color: #3b82f6;
+}
