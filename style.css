@@ -17,8 +17,8 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    box-shadow: 5px 10px red;
 }
+
 
 .calculator {
     width: 25vw;
@@ -29,6 +29,16 @@ body {
     padding: 1.25rem;
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px #121212, 0 8px 10px -6px #121212;
+}
+@media only screen and (max-width: 800px) {
+  .calculator {
+    width: 75vw;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+  .calculator {
+    width: 40vw;
+  }
 }
 
 .display {
@@ -91,6 +101,7 @@ body {
 .button.op {
     background-color: #374151;
     color: #4ADE80;
+    font-weight: 500;
 }
 .button.op:hover {
     background-color: #4b5563;
@@ -98,6 +109,7 @@ body {
 .button.action {
     background-color: #374151;
     color: #F87171;
+    font-weight: 600;
 }
 .button.action:hover {
     background-color: #4b5563;
